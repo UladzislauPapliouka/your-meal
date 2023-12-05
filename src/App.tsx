@@ -3,10 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Button} from "./components/Button";
-
+import {Chip} from "./components/Chip";
+import Pizza from '../src/assets/icons/pizza.svg'
 function App() {
   const [count, setCount] = useState(0)
-
+    const [isActive,setIsActive] = useState(false)
   return (
     <>
       <div>
@@ -22,6 +23,7 @@ function App() {
         <Button fullWidth variant={'secondary'} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>
+          <Chip active={isActive} onClick={()=>setIsActive(!isActive)} icon={<img src={Pizza}/>}>Test</Chip>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
