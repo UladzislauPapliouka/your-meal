@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+
+.button {
+  border-radius: 12px;
+  padding: 11px 32px;
+
+  &.main{
+    background: $accent;
+    color: $white;
+    &:hover{
+      background: $main;
+    }
+    &:active{
+      background: $accent2;
+    }
+  }
+
+  &.secondary{
+    background: $light-grey;
+    color: $black;
+    &:hover{
+      background: $main;
+      color: $white;
+    }
+    &:active{
+      background: $accent2;
+      color: $white;
+    }
+  }
+
+  &:disabled {
+    background: #F9F9F9;
+    color: #ACACAC;
+  }
+  &.fullWidth{
+    width: 100%;
+  }
+}
