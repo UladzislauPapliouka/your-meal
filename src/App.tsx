@@ -5,6 +5,7 @@ import './App.css'
 import {Button} from "./components/Button";
 import {Chip} from "./components/Chip";
 import Pizza from '../src/assets/icons/pizza.svg'
+import {ProductCard} from "./components/ProductCard";
 function App() {
   const [count, setCount] = useState(0)
     const [isActive,setIsActive] = useState(false)
@@ -27,6 +28,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+          <ProductCard productName={'Хот-дог'} price={"235"} productImage={'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Hamburger_%28black_bg%29.jpg/1200px-Hamburger_%28black_bg%29.jpg'} productWeight={555} onAddCLickCallback={()=>{}}/>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
