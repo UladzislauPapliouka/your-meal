@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 import {Button} from "./components/Button";
 import {Chip} from "./components/Chip";
 import Pizza from '../src/assets/icons/pizza.svg'

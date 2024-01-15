@@ -1,0 +1,18 @@
+.header{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  .headerBg{
+    position: absolute;
+    z-index: -1;
+  }
+  .logo{
+    max-width: 150px;
+  }
+  .logoBurger {
+  max-height: 326px;
+  }
+}
