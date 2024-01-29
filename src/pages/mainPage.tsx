@@ -9,9 +9,14 @@ export const MainPage =()=>{
             <header className={classNames(styles.header)}>
                 <img className={classNames(styles.headerBg)} alt={'header-bg'} src={bg}/>
                 <img className={classNames(styles.logo)} alt={'logo'} src={logo}/>
-                <div>
+                <div className={classNames(styles.headerContent)}>
                     <img className={classNames(styles.logoBurger)} alt={'logo-burger'} src={bigBurger}/>
-                    <span></span><span></span><span></span>
+                   <div>
+                       <div className={classNames(styles.tagline)}>
+                           <span>Только самые</span><span>сочные бургеры!</span><span></span>
+                       </div>
+                       <span className={classNames(styles.delivery)}>Бесплатная доставка от 599₽</span>
+                   </div>
                 </div>
             </header>
             <main></main>

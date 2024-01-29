@@ -1,3 +1,4 @@
+@import "src/styles/variables";
 .header{
   width: 100vw;
   display: flex;
@@ -12,7 +13,29 @@
   .logo{
     max-width: 150px;
   }
-  .logoBurger {
-  max-height: 326px;
+ .headerContent{
+   display: flex;
+   align-items: center;
+   .logoBurger {
+     max-height: 326px;
+   }
+  .tagline{
+    font-size: 50px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 52px;
+    & > span:first-child {
+      color: $white;
+    }
+    & >span:nth-child(2){
+      color: $accent3;
+    }
   }
+   .delivery{
+     color:$white;
+     font-weight: 600;
+     font-size: 16px;
+   }
+ }
 }
