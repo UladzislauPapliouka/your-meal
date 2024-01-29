@@ -1,22 +1,18 @@
 @import "src/styles/variables";
 .header{
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   .content{
+    width: 100vw;
+    margin-top: 24px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 24px;
+    top: 0;
   }
   .headerBg{
-    //position: absolute;
     z-index: -1;
   }
   .logo{
