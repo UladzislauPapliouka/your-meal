@@ -6,8 +6,17 @@
   align-items: center;
   flex-direction: column;
   gap: 24px;
-  .headerBg{
+  margin-bottom: 20px;
+  .content{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .headerBg{
+    //position: absolute;
     z-index: -1;
   }
   .logo{
@@ -38,4 +47,13 @@
      font-size: 16px;
    }
  }
+}
+
+.mainContainer{
+  width: 90vw;
+  margin: auto;
+  .mealSelector{
+    display: flex;
+    justify-content: space-between;
+  }
 }
