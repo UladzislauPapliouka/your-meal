@@ -48,7 +48,14 @@ export const MainPage =()=>{
                     {mealSelectorOptions.map(({name,icon})=><Chip icon={<img src={icon} alt={name}/>}>{name}</Chip>)}
                 </section>
             </main>
-            <footer></footer>
+            <footer className={classNames(styles.footer)}>
+                <div className={classNames(styles.mainContainer)}>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                </div>
+            </footer>
         </>
     )
 }
