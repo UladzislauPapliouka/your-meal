@@ -13,6 +13,7 @@ import wok from '../assets/icons/wok.svg'
 import dessert from '../assets/icons/dessert.svg'
 import souce from '../assets/icons/souce.svg'
 import {Chip} from "../components/Chip";
+import {ProductCard} from "../components/ProductCard";
 
 const mealSelectorOptions = [
     {name:"Бургеры",icon:burger},
@@ -43,9 +44,16 @@ export const MainPage =()=>{
                    </div>
                </div>
             </header>
-            <main className={classNames(styles.mainContainer)}>
-                <section className={classNames(styles.mealSelector)}>
+            <section className={classNames(styles.mainContainer,styles.mealSelector)}>
                     {mealSelectorOptions.map(({name,icon})=><Chip icon={<img src={icon} alt={name}/>}>{name}</Chip>)}
+            </section>
+            <main className={classNames(styles.mainContainer,styles.mainContent)}>
+                <section></section>
+                <section>
+                    <span>Бургеры</span>
+                    <div className={classNames(styles.mealGrid)}>
+                        {[1,2,3,4].map(()=><ProductCard productName={'Хот-дог'} price={"235"} productImage={'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Hamburger_%28black_bg%29.jpg/1200px-Hamburger_%28black_bg%29.jpg'} productWeight={555} onAddCLickCallback={()=>{}}/>)}
+                    </div>
                 </section>
             </main>
             <footer className={classNames(styles.footer)}>

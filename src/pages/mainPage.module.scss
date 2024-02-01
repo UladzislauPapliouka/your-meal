@@ -50,15 +50,16 @@
 .mainContainer{
   width: 90vw;
   margin: auto;
-  .mealSelector{
-    display: flex;
-    justify-content: space-between;
-  }
+position: relative;
 }
-
+.mealSelector{
+  display: flex;
+  justify-content: space-between;
+}
 .footer{
   height: 244px;
   background-color: $white;
+  position: relative;
   padding: 50px 75px 0 75px;
   & > .mainContainer {
     display: grid;
@@ -70,6 +71,35 @@
       width: 100%;
       height: 100%;
       background-color: red;
+    }
+  }
+}
+
+.mainContent{
+  margin: 50px auto 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  height: fit-content;
+  &>section{
+    height: 100%;
+    &:first-child{
+      background-color: red;
+    }
+    &:last-child{
+      grid-column: 2/5;
+      background-color: blanchedalmond;
+      & > span {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      & > .mealGrid{
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+      }
     }
   }
 }
