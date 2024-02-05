@@ -48,7 +48,19 @@ export const MainPage =()=>{
                     {mealSelectorOptions.map(({name,icon})=><Chip icon={<img src={icon} alt={name}/>}>{name}</Chip>)}
             </section>
             <main className={classNames(styles.mainContainer,styles.mainContent)}>
-                <section></section>
+                <section>
+                    <div className={classNames(styles.cartContainer)}>
+                        <div className={classNames(styles.cartHeader)}>
+                            <span>Корзина</span>
+                            <span className={classNames(styles.cartCounter)}>
+                                0
+                            </span>
+                        </div>
+                        <div className={classNames(styles.cartContent)}>
+                            <span>Тут пока пусто :(</span>
+                        </div>
+                    </div>
+                </section>
                 <section>
                     <span>Бургеры</span>
                     <div className={classNames(styles.mealGrid)}>
