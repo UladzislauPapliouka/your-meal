@@ -1,6 +1,3 @@
-import bg from '../assets/icons/background.svg'
-import logo from '../assets/icons/logo.svg'
-import bigBurger from '../assets/icons/bigBurger.svg'
 import * as classNames from "classnames";
 import styles from './mainPage.module.scss'
 import burger from '../assets/icons/burger.svg'
@@ -14,6 +11,7 @@ import dessert from '../assets/icons/dessert.svg'
 import souce from '../assets/icons/souce.svg'
 import {Chip} from "../components/Chip";
 import {ProductCard} from "../components/ProductCard";
+import {PageHeader} from "../components/PageHeader";
 
 const mealSelectorOptions = [
     {name:"Бургеры",icon:burger},
@@ -29,21 +27,7 @@ const mealSelectorOptions = [
 export const MainPage =()=>{
     return(
         <>
-            <header className={classNames(styles.header)}>
-                <img className={classNames(styles.headerBg)} alt={'header-bg'} src={bg}/>
-               <div className={classNames(styles.content)}>
-                   <img className={classNames(styles.logo)} alt={'logo'} src={logo}/>
-                   <div className={classNames(styles.headerContent)}>
-                       <img className={classNames(styles.logoBurger)} alt={'logo-burger'} src={bigBurger}/>
-                       <div>
-                           <div className={classNames(styles.tagline)}>
-                               <span>Только самые</span><span>сочные бургеры!</span><span></span>
-                           </div>
-                           <span className={classNames(styles.delivery)}>Бесплатная доставка от 599₽</span>
-                       </div>
-                   </div>
-               </div>
-            </header>
+            <PageHeader/>
             <section className={classNames(styles.mainContainer,styles.mealSelector)}>
                     {mealSelectorOptions.map(({name,icon})=><Chip icon={<img src={icon} alt={name}/>}>{name}</Chip>)}
             </section>
