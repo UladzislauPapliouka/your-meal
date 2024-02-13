@@ -12,6 +12,7 @@ import souce from '../assets/icons/souce.svg'
 import {Chip} from "../components/Chip";
 import {ProductCard} from "../components/ProductCard";
 import {PageHeader} from "../components/PageHeader";
+import {PageFooter} from "../components/PageFooter";
 
 const mealSelectorOptions = [
     {name:"Бургеры",icon:burger},
@@ -52,14 +53,7 @@ export const MainPage =()=>{
                     </div>
                 </section>
             </main>
-            <footer className={classNames(styles.footer)}>
-                <div className={classNames(styles.mainContainer)}>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                </div>
-            </footer>
+            <PageFooter/>
         </>
     )
 }
