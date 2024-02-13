@@ -13,6 +13,7 @@ import {Chip} from "../components/Chip";
 import {ProductCard} from "../components/ProductCard";
 import {PageHeader} from "../components/PageHeader";
 import {PageFooter} from "../components/PageFooter";
+import {Cart} from "../components/Cart";
 
 const mealSelectorOptions = [
     {name:"Бургеры",icon:burger},
@@ -33,19 +34,7 @@ export const MainPage =()=>{
                     {mealSelectorOptions.map(({name,icon})=><Chip icon={<img src={icon} alt={name}/>}>{name}</Chip>)}
             </section>
             <main className={classNames(styles.mainContainer,styles.mainContent)}>
-                <section>
-                    <div className={classNames(styles.cartContainer)}>
-                        <div className={classNames(styles.cartHeader)}>
-                            <span>Корзина</span>
-                            <span className={classNames(styles.cartCounter)}>
-                                0
-                            </span>
-                        </div>
-                        <div className={classNames(styles.cartContent)}>
-                            <span>Тут пока пусто :(</span>
-                        </div>
-                    </div>
-                </section>
+                <Cart/>
                 <section>
                     <span>Бургеры</span>
                     <div className={classNames(styles.mealGrid)}>
